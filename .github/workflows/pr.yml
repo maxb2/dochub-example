@@ -2,6 +2,10 @@ on: push
   # pull_request:
   #   types: [opened, edited]
 
+defaults:
+  run:
+    shell: bash -l {0}
+
 jobs:
   job:
     name: Pull Request Pipeline
