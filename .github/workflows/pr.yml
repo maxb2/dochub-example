@@ -29,6 +29,7 @@ jobs:
     - name: Build the documents
       run: |
         mkdir build
+        conda activate dochub-example
         jupyter nbconvert --to=html --output-dir=build docs/*.ipynb
 
     - uses: actions/upload-artifact@v2
