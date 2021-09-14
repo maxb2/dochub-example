@@ -1,0 +1,5 @@
+name: dochub-example
+dependencies:
+  - python
+  - jupyter
+  - nbconvert
