@@ -22,6 +22,10 @@ jobs:
         python-version: 3.8
         auto-activate-base: false
 
+    - run: |
+        conda info
+        conda list
+
     - name: Validate the documents
       run: |
         echo "validating"
@@ -29,7 +33,6 @@ jobs:
     - name: Build the documents
       run: |
         mkdir build
-        conda activate dochub-example
         jupyter nbconvert --to=html --output-dir=build docs/*.ipynb
 
     - uses: actions/upload-artifact@v2
