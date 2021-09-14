@@ -27,7 +27,7 @@ jobs:
     - name: Build the documents
       run: |
         mkdir build
-        jupyter nbconvert --to=html --output-dir=build docs/
+        jupyter nbconvert --to=html --output-dir=build docs/*.ipynb
 
     - uses: actions/upload-artifact@v2
       with:
@@ -37,7 +37,7 @@ jobs:
     - name: Get artifact url
       run: |
         RESPONSE=$(curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/maxb2/dichub-example/actions/runs/{{ github.run_id }}/artifacts)
-        echo "$RESPENSE"
+        echo "$RESPONSE"
 
 
     # - name: comment PR
