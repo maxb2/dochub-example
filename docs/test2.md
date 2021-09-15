@@ -14,7 +14,7 @@ kernelspec:
 # Test 2
 
 ```{code-cell} ipython3
-1+2
+1+3
 ```
 
 ```{code-cell} ipython3
