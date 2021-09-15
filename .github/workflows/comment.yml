@@ -1,3 +1,4 @@
+name: Comment
 on:
   workflow_run:
     workflows: ["Pull Request Pipeline"]
