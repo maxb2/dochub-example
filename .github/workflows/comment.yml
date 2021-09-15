@@ -15,8 +15,10 @@ jobs:
     - name: Get artifact url
       run: |
         echo $(git log -n 3)
-        RESPONSE=$(curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/maxb2/dichub-example/actions/runs/${{ github.event.workflow_run.run_id }}/artifacts)
-        echo "$RESPONSE"
+        echo '####'
+        echo ${{ github.event.workflow_run }}
+        # RESPONSE=$(curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/maxb2/dichub-example/actions/runs/${{ github.event.workflow_run.run_id }}/artifacts)
+        # echo "$RESPONSE"
 
     # - name: Create commit comment
     #   uses: peter-evans/commit-comment@v1
@@ -34,8 +36,8 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-    - name: Create commit comment
-      uses: peter-evans/commit-comment@v1
-      with:
-        body: |
-          The build failed. See [log](https://github.com/maxb2/dochub-example/actions/runs/${{ github.event.workflow_run.run_id }}).
+    # - name: Create commit comment
+    #   uses: peter-evans/commit-comment@v1
+    #   with:
+    #     body: |
+    #       The build failed. See [log](https://github.com/maxb2/dochub-example/actions/runs/${{ github.event.workflow_run.run_id }}).
