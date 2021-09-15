@@ -17,8 +17,8 @@ jobs:
       run: |
         echo $(git log -n 3)
         echo '####'
-        echo ${{ toJson(github) }}
-        # RESPONSE=$(curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/maxb2/dichub-example/actions/runs/${{ github.event.workflow_run.run_id }}/artifacts)
+        echo "${{ toJson(github.event.workflow_run) }}"
+        # RESPONSE=$(curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/maxb2/dochub-example/actions/runs/${{ github.event.workflow_run.run_id }}/artifacts)
         # echo "$RESPONSE"
 
     # - name: Create commit comment
