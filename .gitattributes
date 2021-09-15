@@ -1,0 +1,2 @@
+test.ipynb filter=lfs diff=lfs merge=lfs -text
+diff --git a/docs/.gitattributes b/docs/.gitattributes
