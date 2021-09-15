@@ -1,8 +1,8 @@
 name: Pull Request Pipeline
 
-on: push
-  # pull_request:
-  #   types: [opened, edited]
+on: 
+  pull_request:
+    types: [opened, edited]
 
 defaults:
   run:
@@ -50,17 +50,3 @@ jobs:
       with:
         name: docs-html
         path: build/*
-
-    # - name: Get artifact url
-    #   run: |
-    #     RESPONSE=$(curl -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/maxb2/dichub-example/actions/runs/${{ github.run_id }}/artifacts)
-    #     echo "$RESPONSE"
-
-
-    # - name: comment PR
-    #         uses: unsplash/comment-on-pr@master
-    #         env:
-    #           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    #         with:
-    #           msg: "Check out this message!"
-    #           check_for_duplicate_msg: false  # OPTIONAL 
