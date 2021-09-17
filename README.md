@@ -4,7 +4,7 @@ This is a simple static site generator for a collection of jupyter notebooks.
 It creates a simple index page with links to all the articles.
 It also uses [lunr.js](https://lunrjs.com/)/[lunr.py](https://lunr.readthedocs.io/en/latest/index.html) to perform client-side full-text searching.
 
-# Getting Started
+## Getting Started
 
 The notebooks are stored with [`git-lfs`](https://git-lfs.github.com/) to avoid versioning them. 
 You'll need to have it installed before cloning this repo.
@@ -35,3 +35,10 @@ docker run --rm -d  -p 8000:80 randombenj/docat
 curl -X POST -F "file=@site.zip" http://localhost:8000/api/dochub-example/1.0.0
 # Open http://localhost:8000/#/dochub-example/1.0.0 in a browser
 ```
+
+
+## TODO
+
+- [ ] Extract `title`, `summary`, and `tags` from notebook metadata.
+- [ ] Add top bar to nbconvert template.
+- [ ] Polish everything.
