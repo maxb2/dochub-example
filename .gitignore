@@ -1,3 +1,5 @@
 *.ipynb_checkpoints
 build/
+!build/search.html
+!build/scripts/page-search.js
 node_modules
