@@ -3,3 +3,4 @@ build/
 !build/search.html
 !build/scripts/page-search.js
 node_modules
+*.zip
