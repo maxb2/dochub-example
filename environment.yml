@@ -1,5 +1,12 @@
 name: dochub-example
+channels: 
+  - conda-forge
 dependencies:
   - python
   - jupyter
+  - jupytext
   - nbconvert
+  - pip
+  - pip:
+    - python-frontmatter
+    - lunr
